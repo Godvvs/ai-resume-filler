@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复杂职位申请表示例 (测试页)</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form fieldset {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #fdfdfd;
+        }
+        form legend {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #1a73e8;
+            padding: 0 10px;
+            margin-left: 10px; /* Align legend nicely */
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="tel"],
+        form input[type="url"],
+        form input[type="date"],
+        form input[type="month"],
+        form input[type="number"],
+        form select,
+        form textarea {
+            width: calc(100% - 22px); /* Account for padding */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        form textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        form input[type="radio"],
+        form input[type="checkbox"] {
+            margin-right: 5px;
+            vertical-align: middle; /* Align better with text */
+        }
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-block; /* Keep radio/checkbox labels inline */
+            margin-right: 15px;
+            font-weight: normal; /* Normal weight for options */
+        }
+        .form-row {
+            display: flex;
+            gap: 15px; /* Space between columns */
+            margin-bottom: 15px;
+        }
+        .form-row > div {
+            flex: 1; /* Each column takes equal space */
+        }
+         .form-row > div label { /* Ensure labels inside rows are correct */
+             display: block;
+             margin-bottom: 5px;
+         }
+         .form-row > div input,
+         .form-row > div select {
+             width: 100%; /* Make inputs fill their column */
+             box-sizing: border-box;
+             margin-bottom: 0; /* Remove bottom margin inside row */
+         }
+        .required-mark {
+            color: red;
+            font-weight: bold;
+            margin-left: 2px;
+        }
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #1558b0;
+        }
+        /* Helper class for visually hidden labels (used with aria-label) */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>职位申请表</h1>
+        <h2>(复杂测试页面)</h2>
+
+        <form id="testApplicationForm" action="#" method="post" onsubmit="alert('模拟提交成功！'); return false;">
+
+            <fieldset>
+                <legend>个人信息</legend>
+
+                <div class="form-row">
+                    <div>
+                        <label for="firstName">名字 (First Name)<span class="required-mark">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required placeholder="例如：张">
+                    </div>
+                    <div>
+                        <label for="lastName">姓氏 (Last Name)<span class="required-mark">*</span></label>
+                        <input type="text" id="lastName" name="personal[lastName]" required placeholder="例如：三">
+                         </div>
+                </div>
+
+                <div>
+                    <label for="chinese_name">中文全名</label>
+                    <input type="text" id="chinese_name" name="chinese_name" aria-label="Chinese Full Name">
+                    </div>
+
+                 <div>
+                    <label for="englishName">英文名 (若有)</label>
+                    <input type="text" id="englishName" name="englishName" placeholder="e.g., John Doe">
+                </div>
+
+                <div class="form-row">
+                    <div>
+                        <label for="dob">出生日期<span class="required-mark">*</span></label>
+                        <input type="date" id="dob" name="birthDate" required>
+                    </div>
+                    <div>
+                        <label for="birth_place_city">出生城市</label>
+                        <input type="text" id="birth_place_city" name="birthPlace" placeholder="例如：北京">
+                         </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="radio-group">
+                        <label>性别<span class="required-mark">*</span>:</label>
+                        <label><input type="radio" name="gender" value="Male" required> 男</label>
+                        <label><input type="radio" name="gender" value="Female"> 女</label>
+                        <label><input type="radio" name="gender" value="Other"> 其他</label>
+                    </div>
+                    <div>
+                        <label for="nationality">国籍</label>
+                        <input type="text" id="nationality" name="nationality" value="中国">
+                    </div>
+                </div>
+
+                 <div class="form-row">
+                     <div>
+                         <label for="maritalStatus">婚姻状况</label>
+                         <select id="maritalStatus" name="marital_status">
+                             <option value="">--请选择--</option>
+                             <option value="Single">未婚</option>
+                             <option value="Married">已婚</option>
+                             <option value="Divorced">离异</option>
+                             <option value="Widowed">丧偶</option>
+                         </select>
+                         </div>
+                     <div>
+                         <label for="politicalAffiliation">政治面貌</label>
+                         <input type="text" id="politicalAffiliation" name="politicalAffiliation" placeholder="例如：中共党员 / 群众 / 民主党派">
+                     </div>
+                 </div>
+                 <div>
+                     <label for="photo_url_field">个人照片链接</label>
+                     <input type="url" id="photo_url_field" name="photoUrl" placeholder="https://example.com/photo.jpg">
+                 </div>
+            </fieldset>
+
+             <fieldset>
+                <legend>联系方式</legend>
+
+                 <div class="form-row">
+                    <div>
+                        <label for="email">电子邮件<span class="required-mark">*</span></label>
+                        <input type="email" id="email" name="email_address" required placeholder="you@example.com">
+                         </div>
+                    <div>
+                        <label for="phone">手机号码<span class="required-mark">*</span></label>
+                        <input type="tel" id="phone" name="contact[phone]" required pattern="[0-9]{11}" title="请输入11位手机号">
+                         </div>
+                </div>
+
+                <div class="form-row">
+                     <div>
+                        <label for="wechatId">微信号</label>
+                        <input type="text" id="wechatId" name="wechat">
+                     </div>
+                     <div>
+                        <label for="linkedin_profile">LinkedIn 个人资料 URL</label>
+                        <input type="url" id="linkedin_profile" name="linkedin" placeholder="https://www.linkedin.com/in/yourprofile">
+                     </div>
+                 </div>
+
+                 <div class="form-row">
+                     <div>
+                         <label for="github_url">GitHub 主页</label>
+                         <input type="url" id="github_url" name="github">
+                     </div>
+                     <div>
+                        <label for="personal_blog">个人博客或网站</label>
+                        <input type="url" id="personal_blog" name="blog">
+                     </div>
+                 </div>
+
+                 <fieldset>
+                     <legend>通讯地址</legend>
+                     <div class="form-row">
+                         <div>
+                            <label for="addr_province">省份</label>
+                            <input type="text" id="addr_province" name="address[province]">
+                         </div>
+                          <div>
+                            <label for="addr_city">城市</label>
+                            <input type="text" id="addr_city" name="address[city]">
+                         </div>
+                          <div>
+                            <label for="addr_district">区/县</label>
+                            <input type="text" id="addr_district" name="address[district]">
+                         </div>
+                     </div>
+                     <div>
+                         <label for="detailed_address">详细街道地址</label>
+                         <input type="text" id="detailed_address" name="address[detailedAddress]">
+                     </div>
+                     <div>
+                         <label for="postalCode">邮政编码</label>
+                         <input type="text" id="postalCode" name="address[postalCode]" pattern="[0-9]{6}" title="请输入6位邮政编码">
+                     </div>
+                 </fieldset>
+            </fieldset>
+
+             <fieldset>
+                <legend>教育背景 (最高学历)</legend>
+                 <div>
+                     <label for="university">学校名称<span class="required-mark">*</span></label>
+                     <input type="text" id="university" name="education[0][school]" required>
+                 </div>
+                 <div class="form-row">
+                     <div>
+                        <label for="degree_level">学位</label>
+                        <select id="degree_level" name="education[0][degree]">
+                             <option value="">--选择学位--</option>
+                             <option value="High School">高中</option>
+                             <option value="Associate">大专</option>
+                             <option value="Bachelor">本科</option>
+                             <option value="Master">硕士</option>
+                             <option value="PhD">博士</option>
+                             <option value="Other">其他</option>
+                         </select>
+                     </div>
+                     <div>
+                        <label for="major">专业/研究领域<span class="required-mark">*</span></label>
+                        <input type="text" id="major" name="education[0][major]" required>
+                     </div>
+                 </div>
+                 <div class="form-row">
+                     <div>
+                         <label for="edu_start_date">入学时间</label>
+                         <input type="month" id="edu_start_date" name="education[0][startDate]">
+                     </div>
+                     <div>
+                         <label for="edu_end_date">毕业时间 (或预计)</label>
+                         <input type="month" id="edu_end_date" name="education[0][endDate]">
+                         </div>
+                 </div>
+                 <div class="form-row">
+                     <div>
+                         <label for="gpa_score">GPA / 平均分</label>
+                         <input type="text" id="gpa_score" name="education[0][gpa]" placeholder="例如：3.8/4.0 或 85/100">
+                     </div>
+                     <div>
+                         <label for="edu_ranking">年级排名 (可选)</label>
+                         <input type="text" id="edu_ranking" name="education[0][ranking]" placeholder="例如：前 5%">
+                     </div>
+                 </div>
+                 <div>
+                    <label for="relevant_courses_input">相关课程 (逗号分隔)</label>
+                    <input type="text" id="relevant_courses_input" name="education[0][relevantCourses]">
+                 </div>
+                  <div>
+                    <label for="thesis_title">毕业论文题目 (若有)</label>
+                    <input type="text" id="thesis_title" name="education[0][thesisTitle]">
+                 </div>
+                 <div>
+                     <label for="thesis_abstract">论文摘要 (简述)</label>
+                     <textarea id="thesis_abstract" name="education[0][thesisAbstract]" rows="3"></textarea>
+                 </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>最近工作经历</legend>
+                <div>
+                     <label for="prev_company">公司名称<span class="required-mark">*</span></label>
+                     <input type="text" id="prev_company" name="workExperience[0][company]" required>
+                 </div>
+                 <div class="form-row">
+                     <div>
+                         <label for="job_title">职位名称<span class="required-mark">*</span></label>
+                         <input type="text" id="job_title" name="workExperience[0][position]" required>
+                     </div>
+                     <div>
+                         <label for="department">所在部门</label>
+                         <input type="text" id="department" name="workExperience[0][department]">
+                     </div>
+                 </div>
+                 <div class="form-row">
+                     <div>
+                        <label for="work_start_dt">开始日期</label>
+                        <input type="month" id="work_start_dt" name="workExperience[0][startDate]">
+                         </div>
+                     <div>
+                        <label for="work_end_dt">结束日期 (留空表示至今)</label>
+                        <input type="month" id="work_end_dt" name="workExperience[0][endDate]">
+                     </div>
+                 </div>
+                 <div>
+                     <label for="responsibilities">主要工作职责<span class="required-mark">*</span></label>
+                     <textarea id="responsibilities" name="workExperience[0][responsibilities]" required rows="4"></textarea>
+                 </div>
+                  <div>
+                     <label for="achievements">主要工作成就</label>
+                     <textarea id="achievements" name="workExperience[0][achievements]" rows="4"></textarea>
+                 </div>
+                 <div>
+                    <label for="industry_worked">所属行业</label>
+                    <input type="text" id="industry_worked" name="workExperience[0][industry]" placeholder="例如：互联网 / 金融 / 制造">
+                 </div>
+            </fieldset>
+
+             <fieldset>
+                <legend>主要项目经验</legend>
+                <div>
+                     <label for="project_name_field">项目名称<span class="required-mark">*</span></label>
+                     <input type="text" id="project_name_field" name="projectExperience[0][projectName]" required>
+                     </div>
+                  <div>
+                     <label for="project_role">你在项目中的角色</label>
+                     <input type="text" id="project_role" name="projectExperience[0][role]">
+                 </div>
+                 <div class="form-row">
+                    <div>
+                         <label for="project_start_date">项目开始时间</label>
+                         <input type="month" id="project_start_date" name="projectExperience[0][startDate]">
+                     </div>
+                     <div>
+                         <label for="project_end_date">项目结束时间</label>
+                         <input type="month" id="project_end_date" name="projectExperience[0][endDate]">
+                     </div>
+                 </div>
+                 <div>
+                     <label for="project_desc">项目描述<span class="required-mark">*</span></label>
+                     <textarea id="project_desc" name="projectExperience[0][description]" required rows="4"></textarea>
+                 </div>
+                 <div>
+                     <label for="tech_used">使用技术 (逗号分隔)</label>
+                     <input type="text" id="tech_used" name="projectExperience[0][technologiesUsed]">
+                 </div>
+                  <div>
+                     <label for="project_link">项目链接 (若有)</label>
+                     <input type="url" id="project_link" name="projectExperience[0][projectUrl]">
+                 </div>
+            </fieldset>
+
+             <fieldset>
+                <legend>技能与资质</legend>
+
+                <div>
+                    <label for="skills_summary">专业技能概述 (例如: Java, Python, SQL, Project Management)</label>
+                    <textarea id="skills_summary" name="skills_list" rows="4" placeholder="请列出你的主要技能，用逗号或换行分隔..."></textarea>
+                     </div>
+
+                 <div class="form-row">
+                     <div>
+                         <label for="primary_skill_name">核心技能名称</label>
+                         <input type="text" id="primary_skill_name" name="skills[0][skillName]" placeholder="如: Java">
+                     </div>
+                     <div>
+                         <label for="primary_skill_proficiency">熟练度</label>
+                         <select id="primary_skill_proficiency" name="skills[0][proficiency]">
+                             <option value="">请选择</option>
+                             <option value="Beginner">入门</option>
+                             <option value="Intermediate">一般</option>
+                             <option value="Advanced">熟练</option>
+                             <option value="Expert">精通</option>
+                         </select>
+                     </div>
+                      <div>
+                         <label for="primary_skill_years">使用年限</label>
+                         <input type="number" id="primary_skill_years" name="skills[0][yearsOfExperience]" min="0" placeholder="年">
+                     </div>
+                 </div>
+
+
+                <div>
+                    <label for="certifications_list">专业证书 (例如: PMP, AWS Certified Developer)</label>
+                    <textarea id="certifications_list" name="certifications_text" rows="3" placeholder="请列出你获得的证书名称..."></textarea>
+                     </div>
+                 <div>
+                    <label for="cert1_name">证书名称示例</label>
+                    <input type="text" id="cert1_name" name="certifications[0][certificationName]">
+                 </div>
+
+
+                 <div>
+                     <label for="language_skills">语言能力 (例如: 英语 CET-6, 日语 N1)</label>
+                     <input type="text" id="language_skills" name="languages_summary" placeholder="请说明你的语言水平...">
+                     </div>
+                  <div class="form-row">
+                    <div>
+                        <label for="lang1_name">主要外语</label>
+                        <input type="text" id="lang1_name" name="languages[0][languageName]" value="English">
+                    </div>
+                    <div>
+                        <label for="lang1_speak">口语水平</label>
+                        <select id="lang1_speak" name="languages[0][speakingProficiency]">
+                            <option value="">--选择--</option>
+                            <option value="Native">母语</option>
+                            <option value="Fluent">流利</option>
+                            <option value="Good">良好</option>
+                            <option value="Basic">基础</option>
+                        </select>
+                    </div>
+                 </div>
+            </fieldset>
+
+             <fieldset>
+                <legend>求职意向</legend>
+                 <div class="form-row">
+                    <div>
+                        <label for="desired_position">期望申请的职位<span class="required-mark">*</span></label>
+                        <input type="text" id="desired_position" name="expectedJob[expectedPosition]" required>
+                    </div>
+                     <div>
+                        <label for="salary_expectation">期望薪资范围 (月薪)</label>
+                        <input type="text" id="salary_expectation" name="expectedJob[expectedSalary]" placeholder="例如：15k-20k RMB 或 面议">
+                    </div>
+                 </div>
+                 <div>
+                     <label for="preferred_locations">期望工作地点 (可多选，逗号分隔)</label>
+                     <input type="text" id="preferred_locations" name="expectedJob[expectedLocation]" placeholder="例如：上海, 北京, 远程">
+                 </div>
+                 <div>
+                     <label for="preferred_industries">期望从事行业 (可多选，逗号分隔)</label>
+                     <input type="text" id="preferred_industries" name="expectedJob[expectedIndustry]" placeholder="例如：互联网, 人工智能, 教育">
+                 </div>
+                 <div class="form-row">
+                     <div>
+                        <label for="job_type_preference">期望工作类型</label>
+                        <select id="job_type_preference" name="expectedJob[jobType]">
+                            <option value="">不限</option>
+                            <option value="Full-time">全职</option>
+                            <option value="Part-time">兼职</option>
+                            <option value="Internship">实习</option>
+                        </select>
+                     </div>
+                      <div class="checkbox-group" style="align-self: center; margin-top: 20px;">
+                        <label>
+                             <input type="checkbox" id="relocate_willingness" name="expectedJob[willingToRelocate]" value="true"> 我愿意考虑异地工作机会
+                             </label>
+                     </div>
+                 </div>
+            </fieldset>
+
+             <fieldset>
+                 <legend>其他信息</legend>
+                 <div>
+                    <label for="self_assessment">自我评价 / 个人总结</label>
+                    <textarea id="self_assessment" name="selfEvaluation" rows="5" placeholder="简要总结你的优势、经验和职业目标..."></textarea>
+                 </div>
+                  <div>
+                    <label for="additional_comments">补充信息</label>
+                    <textarea id="additional_comments" name="additionalInfo" rows="3" placeholder="任何你想补充说明的信息..."></textarea>
+                 </div>
+
+                 <div>
+                    <label for="resume_filename">简历附件名称 (系统通常需要单独上传)</label>
+                    <input type="text" id="resume_filename" name="attachments[resume][path]" placeholder="my_resume_v3.pdf" aria-describedby="file_upload_note">
+                    <p id="file_upload_note" style="font-size: 0.8em; color: #666;">注意：此处仅为模拟字段，实际文件请通过页面提供的上传按钮提交。</p>
+                  </div>
+                  <div>
+                    <label for="coverletter_filename">求职信附件名称</label>
+                    <input type="text" id="coverletter_filename" name="attachments[coverLetter][path]" placeholder="cover_letter_for_ai_company.docx">
+                  </div>
+
+                 <div>
+                    <label for="ref_code">推荐码 (如有)</label>
+                    <input type="text" id="ref_code" name="referral_code">
+                 </div>
+                 <div class="checkbox-group">
+                    <label><input type="checkbox" name="newsletter_subscribe" value="yes"> 订阅公司招聘动态</label>
+                 </div>
+             </fieldset>
+
+            <button type="submit">提交申请</button>
+
+        </form>
+    </div>
+</body>
+</html>

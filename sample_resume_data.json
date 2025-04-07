@@ -1,0 +1,153 @@
+{
+    "personalInfo": {
+      "name": "张三",
+      "chineseName": "张三",
+      "englishName": "San Zhang",
+      "gender": "Male",
+      "birthDate": "1995-08-15",
+      "birthPlace": "北京",
+      "nationality": "中国",
+      "maritalStatus": "Single",
+      "politicalAffiliation": "群众",
+      "photoUrl": ""
+    },
+    "contactInfo": {
+      "phone": "13800138000",
+      "email": "san.zhang@email.com",
+      "wechat": "san_zhang_wx",
+      "linkedin": "https://www.linkedin.com/in/sanzhang",
+      "github": "https://github.com/sanzhang",
+      "blog": "https://sanzhang.blog.com",
+      "address": {
+        "province": "北京",
+        "city": "北京市",
+        "district": "海淀区",
+        "detailedAddress": "中关村大街1号",
+        "postalCode": "100084"
+      }
+    },
+    "education": [
+      {
+        "school": "北京大学",
+        "degree": "Master",
+        "major": "计算机科学与技术",
+        "startDate": "2017-09",
+        "endDate": "2020-06",
+        "gpa": "3.8/4.0",
+        "ranking": "Top 10%",
+        "relevantCourses": ["机器学习", "数据结构", "算法设计", "操作系统"],
+        "thesisTitle": "基于深度学习的自然语言处理研究",
+        "thesisAbstract": "本文研究了......"
+      },
+       {
+        "school": "北京大学",
+        "degree": "Bachelor",
+        "major": "计算机科学与技术",
+        "startDate": "2013-09",
+        "endDate": "2017-06",
+        "gpa": "3.7/4.0",
+        "ranking": "",
+        "relevantCourses": [],
+        "thesisTitle": "",
+        "thesisAbstract": ""
+      }
+    ],
+    "workExperience": [
+      {
+        "company": "XX科技有限公司",
+        "position": "软件工程师",
+        "department": "研发部",
+        "startDate": "2020-07",
+        "endDate": "Present",
+        "responsibilities": "负责核心业务系统的后端开发与维护；参与需求分析、系统设计和代码实现；优化系统性能，解决线上问题。",
+        "achievements": "独立完成XX模块开发，性能提升20%；主导XX项目重构，代码复杂度降低30%。",
+        "industry": "互联网"
+      }
+    ],
+    "projectExperience": [
+      {
+        "projectName": "智能推荐系统",
+        "role": "核心开发者",
+        "startDate": "2019-03",
+        "endDate": "2019-12",
+        "description": "开发一个基于用户行为和内容的混合推荐引擎，提高用户点击率和满意度。",
+        "technologiesUsed": ["Python", "Flask", "Spark", "Redis", "Docker"],
+        "projectUrl": "https://github.com/sanzhang/recommendation-system"
+      }
+    ],
+    "skills": [
+      {
+        "skillName": "Java",
+        "proficiency": "Advanced",
+        "yearsOfExperience": 4
+      },
+      {
+        "skillName": "Python",
+        "proficiency": "Advanced",
+        "yearsOfExperience": 5
+      },
+       {
+        "skillName": "Spring Boot",
+        "proficiency": "Intermediate",
+        "yearsOfExperience": 3
+      },
+       {
+        "skillName": "MySQL",
+        "proficiency": "Advanced",
+        "yearsOfExperience": 4
+      },
+       {
+        "skillName": "项目管理",
+        "proficiency": "Intermediate",
+        "yearsOfExperience": 2
+      }
+    ],
+    "certifications": [
+      {
+        "certificationName": "Oracle Certified Java Programmer (OCP)",
+        "issuingOrganization": "Oracle",
+        "issueDate": "2021-05",
+        "expiryDate": "N/A",
+        "certificationId": "OCP123456"
+      }
+    ],
+    "awardsAndHonors": [
+      {
+        "awardName": "校级优秀毕业生",
+        "issuingOrganization": "北京大学",
+        "awardDate": "2020-06",
+        "description": ""
+      }
+    ],
+    "languages": [
+      {
+        "languageName": "English",
+        "readingProficiency": "Fluent",
+        "speakingProficiency": "Good",
+        "writingProficiency": "Good"
+      },
+       {
+        "languageName": "中文",
+        "readingProficiency": "Native",
+        "speakingProficiency": "Native",
+        "writingProficiency": "Native"
+      }
+    ],
+    "expectedJob": {
+      "expectedPosition": "高级软件工程师 / 技术经理",
+      "expectedSalary": "25k-35k RMB",
+      "expectedLocation": ["北京", "上海"],
+      "expectedIndustry": ["互联网", "人工智能"],
+      "jobType": "Full-time",
+      "willingToRelocate": true
+    },
+    "selfEvaluation": "具备扎实的编程基础和丰富的后端开发经验，熟悉分布式系统设计与优化。学习能力强，有良好的沟通和团队协作能力。对新技术充满热情，渴望在人工智能领域发展。",
+    "references": [],
+    "additionalInfo": "期望加入一个技术氛围浓厚、有挑战性的团队。",
+    "attachments": {
+      "photo": { "path": "" },
+      "resume": { "path": "张三_简历_v1.pdf" },
+      "coverLetter": { "path": "张三_求职信.docx" },
+      "otherAttachments": []
+    }
+  }
